@@ -1,7 +1,7 @@
 {
   "name": "@ksakira10/ngx-via-cep",
   "version": "0.0.3-2",
-  "description": "A Angular package for ViaCEP <https://viacep.com.br/>",
+  "description": "A Angular package for ViaCEP (https://viacep.com.br/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/KsAkira10/ngx-via-cep.git"
