@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
-import { NgxViaCepComponent } from './ngx-via-cep.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 
 @NgModule({
-  declarations: [NgxViaCepComponent],
+  declarations: [],
   imports: [HttpClientModule],
-  exports: [HttpClientModule, NgxViaCepComponent]
+  exports: [HttpClientModule]
 })
 export class NgxViaCepModule {}

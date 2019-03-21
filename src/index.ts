@@ -3,5 +3,4 @@
  */
 
 export * from './lib/ngx-via-cep.service';
-export * from './lib/ngx-via-cep.component';
 export * from './lib/ngx-via-cep.module';

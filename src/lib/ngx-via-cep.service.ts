@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,21 @@ export class NgxViaCepService {
   constructor(private http: HttpClient) {}
 
   fetchByCEP(cep: string): Observable<any> {
-    return this.http.get(this.urlFetchByCEP(cep));
+    const subject = new Subject<HttpErrorResponse>();
+    cep = cep.replace(/[!@#$%^&*a-zA-Z.-]/gi, '');
+
+    if (/\d{8}/.test(cep)) {
+      return this.http.get(this.urlFetchByCEP(cep));
+    }
+
+    subject.error(
+      new HttpErrorResponse({
+        status: 412,
+        statusText: 'Precondition failed',
+        error: { code: 1, message: 'length must be equals 8' }
+      })
+    );
+    return subject.asObservable();
   }
 
   fetchByAddressSaoPaulo(address: string): Observable<any> {
