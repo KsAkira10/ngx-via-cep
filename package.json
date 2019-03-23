@@ -16,6 +16,8 @@
     "url": "https://www.linkedin.com/in/lucasakirauehara/"
   },
   "license": "MIT",
+  "private": false,
+  "homepage": "https://ksakira10.github.io/base-project/ngx-via-cep",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0",
