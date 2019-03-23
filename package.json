@@ -7,7 +7,13 @@
     "url": "https://github.com/KsAkira10/ngx-via-cep.git"
   },
   "keywords": [
-    "angular"
+    "angular",
+    "rxjs",
+    "cep",
+    "endereço",
+    "viacep",
+    "buscar cep brasil",
+    "buscar endereço brasil"
   ],
   "readme": "./README.md",
   "author": {
@@ -19,8 +25,8 @@
   "private": false,
   "homepage": "https://ksakira10.github.io/base-project/ngx-via-cep",
   "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0",
+    "@angular/common": ">=4.3.0",
+    "@angular/core": ">=4.3.0",
     "rxjs": "^6.4.0"
   }
 }
